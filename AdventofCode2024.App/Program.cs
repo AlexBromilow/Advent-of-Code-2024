@@ -25,6 +25,10 @@ internal class Program
 
         IServiceProvider serviceProvider = serviceScope.ServiceProvider;
 
+        Day1 day1 = serviceProvider.GetRequiredService<Day1>();
+
+        day1.Challenge2();
+
         await host.RunAsync();
     }
 
