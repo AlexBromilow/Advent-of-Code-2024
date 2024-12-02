@@ -6,6 +6,7 @@ using AdventofCode.Core.PuzzleInput.Service.Interface;
 using AdventofCode.Core.PuzzleInput.Repository;
 using AdventofCode.Core.Puzzle;
 using Advent_of_Code_2024.Day1;
+using Advent_of_Code_2024.Day2;
 
 internal class Program
 {
@@ -16,7 +17,7 @@ internal class Program
 
         builder.Services.AddSingleton<IPuzzleInputService, PuzzleInputService>();
         builder.Services.AddSingleton<PuzzleInputRepository>();
-        builder.Services.AddSingleton<Day1>();
+        builder.Services.AddSingleton<Day2>();
         builder.Services.AddTransient<PuzzleTools>();
 
         using IHost host = builder.Build();
@@ -25,16 +26,10 @@ internal class Program
 
         IServiceProvider serviceProvider = serviceScope.ServiceProvider;
 
-        Day1 day1 = serviceProvider.GetRequiredService<Day1>();
+        Day2 day2 = serviceProvider.GetRequiredService<Day2>();
 
-        day1.Challenge2();
+        day2.Challenge2();
 
         await host.RunAsync();
-    }
-
-    public class TestClass
-    {
-        public List<int> LeftColumn { get; set; }
-        public List<int> RightColumn { get; set; }
     }
 }
