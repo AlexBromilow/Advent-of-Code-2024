@@ -1,0 +1,33 @@
+{
+  "Rules": [
+    { "FirstNumber": 47, "SecondNumber": 53 },
+    { "FirstNumber": 97, "SecondNumber": 13 },
+    { "FirstNumber": 97, "SecondNumber": 61 },
+    { "FirstNumber": 97, "SecondNumber": 47 },
+    { "FirstNumber": 75, "SecondNumber": 29 },
+    { "FirstNumber": 61, "SecondNumber": 13 },
+    { "FirstNumber": 75, "SecondNumber": 53 },
+    { "FirstNumber": 29, "SecondNumber": 13 },
+    { "FirstNumber": 97, "SecondNumber": 29 },
+    { "FirstNumber": 53, "SecondNumber": 29 },
+    { "FirstNumber": 61, "SecondNumber": 53 },
+    { "FirstNumber": 97, "SecondNumber": 53 },
+    { "FirstNumber": 61, "SecondNumber": 29 },
+    { "FirstNumber": 47, "SecondNumber": 13 },
+    { "FirstNumber": 75, "SecondNumber": 47 },
+    { "FirstNumber": 97, "SecondNumber": 75 },
+    { "FirstNumber": 47, "SecondNumber": 61 },
+    { "FirstNumber": 75, "SecondNumber": 61 },
+    { "FirstNumber": 47, "SecondNumber": 29 },
+    { "FirstNumber": 75, "SecondNumber": 13 },
+    { "FirstNumber": 53, "SecondNumber": 13 }
+  ],
+  "Updates": [
+    [75, 47, 61, 53, 29],
+    [97, 61, 53, 29, 13],
+    [75, 29, 13],
+    [75, 97, 47, 61, 53],
+    [61, 13, 29],
+    [97, 13, 75, 29, 47]
+  ]
+}
