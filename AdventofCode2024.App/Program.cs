@@ -10,6 +10,7 @@ using Advent_of_Code_2024.Day2;
 using Advent_of_Code_2024.Day3;
 using Advent_of_Code_2024.Day4;
 using Advent_of_Code_2024.Day5;
+using Advent_of_Code_2024.Day6;
 using AdventofCode.Core.Shared.Services;
 
 internal class Program
@@ -17,7 +18,7 @@ internal class Program
     private static async Task Main(string[] args)
     {
         HostApplicationBuilder builder = Host.CreateApplicationBuilder(args);
-        builder.Configuration.AddJsonFile("D:\\Projects\\Advent-of-Code-2024\\AdventofCode2024.App\\appsettings.json", optional: false, reloadOnChange: true);
+        builder.Configuration.AddJsonFile("C:\\Projects\\Advent of Code 2024\\AdventofCode2024.App\\appsettings.json", optional: false, reloadOnChange: true);
 
         builder.Services.AddSingleton<IPuzzleInputService, PuzzleInputService>();
         builder.Services.AddSingleton<PuzzleInputRepository>();
@@ -27,6 +28,7 @@ internal class Program
         builder.Services.AddSingleton<Day3>();
         builder.Services.AddSingleton<Day4>();
         builder.Services.AddSingleton<Day5>();
+        builder.Services.AddSingleton<Day6>();
         builder.Services.AddTransient<PuzzleTools>();
 
         using IHost host = builder.Build();
@@ -35,9 +37,9 @@ internal class Program
 
         IServiceProvider serviceProvider = serviceScope.ServiceProvider;
 
-        Day5 day5 = serviceProvider.GetRequiredService<Day5>();
+        Day6 day6 = serviceProvider.GetRequiredService<Day6>();
 
-        day5.Challenge2();
+        day6.Challenge2();
 
         await host.RunAsync();
     }
