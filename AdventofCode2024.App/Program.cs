@@ -11,6 +11,7 @@ using Advent_of_Code_2024.Day3;
 using Advent_of_Code_2024.Day4;
 using Advent_of_Code_2024.Day5;
 using Advent_of_Code_2024.Day6;
+using Advent_of_Code_2024.Day7;
 using AdventofCode.Core.Shared.Services;
 
 internal class Program
@@ -29,6 +30,7 @@ internal class Program
         builder.Services.AddSingleton<Day4>();
         builder.Services.AddSingleton<Day5>();
         builder.Services.AddSingleton<Day6>();
+        builder.Services.AddSingleton<Day7>();
         builder.Services.AddTransient<PuzzleTools>();
 
         using IHost host = builder.Build();
@@ -37,9 +39,9 @@ internal class Program
 
         IServiceProvider serviceProvider = serviceScope.ServiceProvider;
 
-        Day6 day6 = serviceProvider.GetRequiredService<Day6>();
+        Day7 day7 = serviceProvider.GetRequiredService<Day7>();
 
-        day6.Challenge2();
+        day7.Challenge2();
 
         await host.RunAsync();
     }
